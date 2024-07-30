@@ -1,0 +1,121 @@
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --max-width: 960px;
+    --rounded-sm: .5rem;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    min-height: 100dvh;
+    min-height: 100vh;
+    width: 100vw;
+    background: rgb(51,52,52);
+    background: linear-gradient(90deg, rgb(33, 34, 34) 0%, rgb(63, 63, 63) 100%);
+}
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;   
+    padding: 0 1rem;
+}
+
+.main-header h1{
+    color: #fff;
+    margin: 1rem 0;
+}
+
+
+.box{
+    padding: 0 1rem;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto; 
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+    padding: 1rem;
+    background: rgb(35, 35, 35);
+    border-radius: var(--rounded-sm);
+    color: aliceblue;
+    outline: 1px solid #626262;
+    outline-offset: 2px;
+    transition: all .2s ease-in-out;
+}
+
+.card:hover{
+    outline: 2px solid #626262;
+    outline-offset: 3px;
+}
+
+.card:last-child{
+    margin-bottom: 4rem;
+}
+
+.card-date{
+    color: rgb(124, 124, 124);
+}
+
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.category{
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 90%;
+    padding: .3rem .6rem;
+    border-radius: var(--rounded-sm);
+    color: black;
+}
+
+
+.möööö{
+    align-self: flex-start;
+    background: rgb(252, 55, 55);
+    border-bottom: 3px solid hsl(0, 95%, 40%);
+    border-radius: var(--rounded-sm);
+    padding: .4rem .8rem;
+    text-decoration: none;
+    color: rgb(51,52,52);
+}
+
+
+
+
+/*-- DETAILS --*/
+
+.details{
+    padding: 0 1rem;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.details img{
+    margin: 1rem 0;
+    border-radius:  var(--rounded-sm);
+    box-shadow:  0 0 1rem rgba(0, 0, 0, .6);
+}
