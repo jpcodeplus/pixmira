@@ -13,13 +13,25 @@
 <body>
 
     <header class="main-header">
-        <h1>Pixmira</h1>
-        <button>Filter</button>
+        <h1>PixMira <span class="flicker">- #NoAfD</span></h1>
+        <button id="filterButton">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path fill="#fff" fill-rule="evenodd" d="M3 7a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Zm3 5a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1Zm3 5a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Z" clip-rule="evenodd" />
+            </svg>
+
+        </button>
     </header>
 
 
-    <div class="filter box">
-        Kategorie 1<br>Kategorie 12<br>Kategorie 2<br>Kategorie 6<br>Kategorie 7<br>    </div>
+    <div class="filter hidden" id="filterDiv">
+        <div class="box filter-links">
+            <button data-filter="kategorie_1">Kategorie 1</button><button data-filter="kategorie_12">Kategorie 12</button><button data-filter="kategorie_2">Kategorie 2</button><button data-filter="kategorie_6">Kategorie 6</button><button data-filter="kategorie_7">Kategorie 7</button>        </div>
+    </div>
+
+    <div class="filterdby">
+        <div class="box "></div>
+    </div>
 
 
     <div class="cards">
@@ -184,6 +196,9 @@
                 <h2>Selenskyj hat US-Staatsbürgerschaft beantragt</h2>
                 <a class="möööö" href="detail.php">Mööööö!!!!</a>
             </div>    </div>
+
+    <script src="./script.js"></script>
+
 </body>
 
 </html>
