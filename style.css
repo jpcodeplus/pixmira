@@ -124,6 +124,7 @@ main {
 
 .filter button {
     background: var(--filter-bg);
+    color: #000000;
     padding: 6px 10px;
     border-radius: var(--rounded-sm);
     border: none;
