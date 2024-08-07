@@ -23,7 +23,7 @@ body {
 
 main {
     display: flex;
-    background: blue;
+    color: #fff;
 }
 
 
@@ -177,4 +177,56 @@ button {
     22% {
         opacity: 0.3;
     }
+}
+
+
+
+.back {
+    text-decoration: none;
+}
+.back svg{
+    height: 2rem;
+    fill: white;
+    opacity: .625;
+}
+
+
+header h1.header{
+    display: flex;
+    gap: .75rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.details h1{
+ margin: 1rem 0;
+}
+
+li a{
+    color: white;
+    opacity: .825;
+}
+
+li a:hover{
+    color: white;
+    opacity: 1;
+}
+
+
+table{
+    margin: 2rem 0;
+    width: 100%;
+}
+
+table td{
+    border-bottom: 1px solid #fff;
+    padding: .5rem 0;
+}
+
+table br{
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    display: block;
+    height: 1px;
+    margin: 2px 0 !important;
 }

@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '/fx.php';
+include __DIR__ . '/code/app.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,21 +17,17 @@ include __DIR__ . '/fx.php';
     <header class="main-header">
         <h1>PixMira <span class="flicker">- #NoAfD</span></h1>
         <button id="filterButton">
-
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <path fill="#fff" fill-rule="evenodd" d="M3 7a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Zm3 5a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1Zm3 5a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Z" clip-rule="evenodd" />
             </svg>
-
         </button>
     </header>
-
 
     <div class="filter hidden" id="filterDiv">
         <div class="box filter-links">
             <?php
-            $categories = getUniqueSortedCategories($data);
             foreach ($categories as $category) {
-                echo '<button data-filter="' . sanitizeString($category) . '">' . $category . '</button>';
+                echo '<button data-filter="' . Sanitizer::sanitizeString($category) . '">' . htmlspecialchars($category) . '</button>';
             }
             ?>
         </div>
@@ -41,12 +37,11 @@ include __DIR__ . '/fx.php';
         <div class="box "></div>
     </div>
 
-
     <div class="cards">
         <?php
         foreach ($data as $item) {
             echo '
-            <div class="card ' . sanitizeString($item['category']) . '">
+            <div class="card ' . Sanitizer::sanitizeString($item['category']) . '">
                 <div class="info">
                     <span class="card-date">' . htmlspecialchars($item['date']) . '</span>
                     <span class="category c-1">' . htmlspecialchars($item['category']) . '</span>
